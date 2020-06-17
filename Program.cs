@@ -26,11 +26,11 @@ namespace PubSubExample
             });
             Thread consumerThread = new Thread(() =>
             {
-                // for (int i = 0; i < 3; i++)
-                // {
-                Console.WriteLine($"Inside consumer thread when i = {0}");
-                ConsumerThread(blockingQueue, Program.TIMEOUT_IN_MILLISECONDS);
-                // }
+                for (int i = 0; i < 3; i++)
+                {
+                    Console.WriteLine($"Inside consumer thread when i = {i}");
+                    ConsumerThread(blockingQueue, Program.TIMEOUT_IN_MILLISECONDS);
+                }
             });
             producerThread.Start();
             consumerThread.Start();
