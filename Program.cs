@@ -8,7 +8,7 @@ namespace PubSubExample
         private static readonly object _lock = new object();
         const int BUFFER_CAPACITY = 10;
         const int TIMEOUT_IN_MILLISECONDS = 1000;
-        private static Mutex mutex;
+        private static Mutex mutex = new Mutex();
         static void Main(string[] args)
         {
             BlockingQueue<int> blockingQueue = new BlockingQueue<int>(5);
