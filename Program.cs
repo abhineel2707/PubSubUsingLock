@@ -51,7 +51,7 @@ namespace PubSubExample
             }
 
             // After wait is completed we will reacquire the lock
-            int item = new Random(10).Next(100, 1000);
+            int item = new Random().Next(100, 1000);
             Console.WriteLine($"Inside producer thread. Writing {item} to the buffer queue.");
             Console.WriteLine();
             blockingQueue.Write(item);
